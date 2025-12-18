@@ -1,18 +1,4 @@
-import express from 'express';
-import cors from 'cors';
-import 'dotenv/config';
+import { listarEventos } from './eventos.js';
 
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('API Calendário rodando');
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`API rodando na porta ${PORT}`);
-});
-
+console.log("Servidor iniciado...");
+console.log("Eventos disponíveis:", listarEventos());
