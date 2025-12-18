@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import eventosRoutes from './eventos.js';
+import eventosRoutes from './rotas/origem/rotas/eventos.js';
+
 
 const app = express();
 
